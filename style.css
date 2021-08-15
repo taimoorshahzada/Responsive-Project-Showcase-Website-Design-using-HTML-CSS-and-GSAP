@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #161616;
+    font-family: 'Monument';
+    color: white;
+    overflow-x: hidden;
+    min-height: 100vh;
+    width: 100%;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.projects-contain{
+    position: absolute;
+    display: flex;
+    top: 20%;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 300vh;
+    width: 100%;
+    flex-direction: column;
+}
+.contain{
+    position: relative;
+    width: 560px;
+    height: 380px;
+    margin: 50px 400px 120px 80px;
+}
+.contain .c-title{
+    position: absolute;
+    left: 40px;
+    bottom: -40px;
+    color: #fff;
+    font-style: italic;
+    text-transform: lowercase;
+    font-size: 50px;
+}
+.contain .c-title a{
+    transition: 1.6s;
+    color: #fff;
+    text-decoration: none;
+}
+.contain:hover .c-title a{
+    transition: 1.6s;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px white;
+    text-decoration: underline .5px;
+}
+.project-h1{
+    position: relative;
+    width: 660px;
+    height: 10px;
+    margin: 20px 400px 100px 80px;
+}
+.project-h1 h1{
+    font-size: 80px;
+    text-transform: uppercase;
+    text-decoration: underline .5px;
+    font-weight: lighter;
+}
+.hover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.hover ion-icon{
+    font-size: 150px;
+    opacity: 0;
+    transition: .6s;
+}
+.c1{
+    background-image: url(assets/img1.jpg);
+}
+.c2{
+    background-image: url(assets/img2.jpg);
+}
+.c3{
+    background-image: url(assets/img3.jpg);
+}
+.c4{
+    background-image: url(assets/img4.jpg);
+}
+.c5{
+    background-image: url(assets/img5.jpg);
+}
+.c6{
+    background-image: url(assets/img6.jpg);
+}
+.c1,
+.c2,
+.c3,
+.c4,
+.c5,
+.c6{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    transition: .6s;
+}
+.contain:hover .hover ion-icon{
+    opacity: 1;
+    z-index: 100;
+    transition: .6s;
+}
+.contain:hover .hover{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+@media(max-width: 1150px){
+    .contain,
+    .project-h1{
+        margin: 50px 230px 90px 95px;
+    }
+}
+@media(max-width: 900px){
+    .contain,
+    .project-h1{
+        width: 300px;
+        height: 200px;
+        margin: 50px 100px 70px 80px;
+    }
+    .contain .c-title{
+        font-size: 25px;
+        bottom: -20px;
+    }
+    .project-h1{
+        margin-bottom: -100px;
+
+    }
+    .project-h1 h1{
+        font-size: 35px;
+    }
+    .hover ion-icon{
+        font-size: 70px;
+    }
+}
